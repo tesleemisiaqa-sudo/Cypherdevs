@@ -73,7 +73,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0c10] dark:bg-[#0a0c10] text-slate-100 dark:text-slate-100 light:bg-slate-50 light:text-slate-900 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-[#07132b] text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-300">
       
       {/* Navigation Header */}
       <Navbar

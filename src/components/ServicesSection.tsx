@@ -17,29 +17,29 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ openQuoteModal
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Code': return <Code className="w-6 h-6 text-cyan-400" />;
-      case 'BrainCircuit': return <BrainCircuit className="w-6 h-6 text-cyan-400" />;
-      case 'ShieldCheck': return <ShieldCheck className="w-6 h-6 text-cyan-400" />;
-      case 'Smartphone': return <Smartphone className="w-6 h-6 text-cyan-400" />;
-      case 'Cloud': return <Cloud className="w-6 h-6 text-cyan-400" />;
-      case 'Palette': return <Palette className="w-6 h-6 text-cyan-400" />;
-      default: return <Code className="w-6 h-6 text-cyan-400" />;
+      case 'Code': return <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'BrainCircuit': return <BrainCircuit className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'ShieldCheck': return <ShieldCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'Smartphone': return <Smartphone className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'Cloud': return <Cloud className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'Palette': return <Palette className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      default: return <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
     }
   };
 
   return (
-    <section id="services-section" className="py-20 bg-[#0a0c10] dark:bg-[#0a0c10] light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 border-b border-blue-500/20 dark:border-blue-500/20 light:border-slate-200">
+    <section id="services-section" className="py-20 bg-blue-50/40 dark:bg-[#07132b] text-slate-900 dark:text-slate-100 border-b border-blue-100 dark:border-blue-900/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-mono font-bold tracking-widest text-blue-400 dark:text-blue-400 light:text-blue-600 uppercase bg-blue-500/10 px-3.5 py-1 rounded-full border border-blue-500/30">
+          <span className="text-xs font-mono font-bold tracking-widest text-blue-700 dark:text-blue-300 uppercase bg-blue-100 dark:bg-blue-900/60 px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-700">
             {t('servicesBadge')}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-950 dark:text-white">
             {t('servicesHeading')}
           </h2>
-          <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
             {t('servicesSubtitle')}
           </p>
         </div>
@@ -59,27 +59,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ openQuoteModal
                 <div>
                   {/* Icon & Category */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/60 border border-blue-200 dark:border-blue-700 flex items-center justify-center group-hover:scale-110 transition-transform">
                       {renderIcon(service.iconName)}
                     </div>
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-md bg-blue-500/15 text-blue-300 dark:text-blue-300 light:text-blue-700 uppercase">
+                    <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-md bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 uppercase">
                       {service.category}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                     {desc}
                   </p>
 
                   {/* Feature Checklist */}
-                  <div className="space-y-2 mb-6 border-t border-slate-800/60 dark:border-slate-800/60 light:border-slate-200 pt-4">
+                  <div className="space-y-2 mb-6 border-t border-blue-100 dark:border-blue-900/60 pt-4">
                     {features.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
+                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-200">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -90,7 +90,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ openQuoteModal
                 <button
                   id={`service-quote-${service.id}-btn`}
                   onClick={() => openQuoteModal(title)}
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-slate-900/80 dark:bg-slate-900/80 light:bg-slate-100 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white light:hover:bg-blue-600 light:hover:text-white text-blue-300 dark:text-blue-300 light:text-slate-800 border border-blue-500/30 dark:border-blue-500/30 light:border-slate-300 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-blue-50 dark:bg-blue-900/40 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>{t('requestQuote')}</span>
